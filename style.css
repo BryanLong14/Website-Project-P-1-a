@@ -1,0 +1,261 @@
+
+
+/* Parallax base styles
+ --------------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative:700');
+
+ .Title {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 900px;
+ }
+
+a:link {
+     text-decoration: none;
+ }
+
+h1 {
+  font-family: 'Cinzel Decorative', cursive;
+  /*font-family: 'Cabin Sketch', cursive;*/
+  font-size: 12rem;
+}
+
+h2 {
+  3rem;
+}
+
+h3 {
+  2rem;
+}
+
+footer {
+ display: flex;
+ flex-direction: row;
+ flex-flow: nowrap;
+ justify-content: space-between;
+ background-color: black;
+}
+
+footer ul {
+ display: flex;
+ flex-direction: row;
+ flex-flow: nowrap;
+ justify-content: space-between;
+ align-content: center;
+ list-style: none;
+}
+
+footer h2{
+  padding: 1.5rem;
+  color: white;
+  font-family: 'Cinzel Decorative', cursive;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-size: 2rem;
+}
+
+footer li {
+  padding: 1.4rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-size: 1.3rem;
+}
+
+footer a {
+  color: white;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+/*Parallax Info*/
+ .parallax {
+   height: 100vh;
+   overflow-x: hidden;
+   overflow-y: auto;
+   -webkit-perspective: 300px;
+   perspective: 300px;
+ }
+
+ .parallax__group {
+   position: relative;
+   height: 100vh;
+   -webkit-transform-style: preserve-3d;
+   transform-style: preserve-3d;
+ }
+
+ .parallax__layer {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+ }
+
+ .parallax__layer--fore {
+   -webkit-transform: translateZ(180px) scale(.4);
+   transform: translateZ(180px) scale(.4);
+   z-index: 1;
+ }
+
+ .parallax__layer--base {
+   -webkit-transform: translateZ(0);
+   transform: translateZ(0);
+   z-index: 4;
+ }
+
+ .parallax__layer--back {
+   -webkit-transform: translateZ(-300px) scale(2);
+   transform: translateZ(-300px) scale(2);
+   z-index: 3;
+ }
+
+ .parallax__layer--deep {
+   -webkit-transform: translateZ(-600px) scale(3);
+   transform: translateZ(-600px) scale(3);
+   z-index: 2;
+ }
+
+/* body styles */
+
+ body, html {
+   overflow: hidden;
+ }
+
+ body {
+   font: 100% Arial;
+ }
+
+ * {
+   margin:0;
+   padding:0;
+ }
+
+ .parallax {
+   font-size: 200%;
+ }
+
+
+ /* style the parallax groups
+ --------------------------------------------- */
+
+ #group1 {
+   z-index: 5; /* slide over group 2 */
+ }
+
+ .group1_saturn {
+   position: absolute;
+   top:50%;
+   right:15%;
+   opacity: .7
+ }
+
+ .group1_mercury {
+   position: absolute;
+   top:01%;
+   left:-10%;
+   opacity: .7
+ }
+
+ #group2 {
+   z-index: 3; /* slide under groups 1 and 3 */
+ }
+
+
+
+.group2_moon {
+  position: absolute;
+  top:180%;
+  opacity: .8
+}
+
+.group2_ISS {
+  position: absolute;
+  top:-160%;
+  left: 12%;
+  opacity: .8
+}
+
+ .group2_cloud {
+   position: absolute;
+   left:5%;
+   top:-25%;
+   opacity: .7;
+ }
+
+ .size {
+   height: 50%;
+   width: 50%;
+ }
+
+ .size2 {
+   height: 70%;
+   width: 70%;
+ }
+
+ .size3 {
+   height: 60%;
+   width: 60%;
+ }
+
+ .size4 {
+   height: 150%;
+   width: 150%;
+ }
+
+
+ .group2_sun {
+    position: absolute;
+   top:47%;
+   right:-6%;
+ }
+
+ #group3 {
+   z-index: 4; /* slide over group 2 and 4 */
+ }
+
+ .group3_red {
+   position: absolute;
+   top:-20%;
+   left:42%;
+ }
+
+ #group5 {
+   z-index:5;
+ }
+
+ .group5_cloud {
+   position: absolute;
+   top:-5%;
+   left:5%;
+   opacity: .7;
+ }
+
+ .group6_cloud {
+   position: absolute;
+   top:-25%;
+   left:65%;
+   opacity: .7;
+ }
+
+ .group7_cloud {
+   position: absolute;
+   top:-5%;
+   left:35%;
+   opacity: .7;
+ }
+
+ .website-background {
+   position: absolute;
+   z-index: -1;
+   top: 0;
+   left: 0;
+   right: 0;
+   background: url(images/website-background-blank.png) center center;
+   background-repeat: no-repeat;
+   background-size: 100%;
+   width: 100%;
+   height: 100%;
+ }

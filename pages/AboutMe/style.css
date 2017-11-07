@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative:700');
+
+* { box-sizing: border-box; }
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#vidtop-content {
+	top: 0;
+	color: #fff;
+}
+
+.hidden{
+  display: none;
+}
+
+.vid-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  margin: 2rem;
+  padding: 1.5rem;
+  font-family: 'Cinzel Decorative', cursive; Avenir, Helvetica, sans-serif;
+}
+a:link {
+    text-decoration: none;
+}
+
+
+.profile-photo {
+  opacity: .8;
+}
+
+.vid-info h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0;
+  line-height: 1.2; }
+
+  .vid-info ul {
+  padding: .5rem;
+  color: white;
+}
+
+.vid-info a {
+  padding: .5rem;
+  color: white;
+}
+
+
+footer {
+ display: flex;
+ flex-direction: row;
+ flex-flow: nowrap;
+ justify-content: space-between;
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+}
+
+footer ul {
+ display: flex;
+ flex-direction: row;
+ flex-flow: nowrap;
+ justify-content: space-between;
+ align-content: center;
+ list-style: none;
+}
+
+footer h2 {
+  padding: 1.5rem;
+  color: white;
+  font-family: 'Cinzel Decorative', cursive;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-size: 2rem;
+}
+
+footer li {
+  padding: 1.4rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-size: 1.3rem;
+}
+
+footer a {
+  color: white;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
+}
