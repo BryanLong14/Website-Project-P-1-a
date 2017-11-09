@@ -46,6 +46,8 @@ a:link {
 
 .profile-photo {
   opacity: .8;
+  height: 70%;
+  width: 70%;
 }
 
 .vid-info h1 {
